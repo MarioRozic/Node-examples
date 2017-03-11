@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SMS Web App Demo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header> <h1>Text Anybody</h1></header>
+  <section id="main" role="main">
+    <p class="intro">Enter a number, begins with a country code</p>
+    <form>
+      <input type="tel" name="number" placeholder="15551231234" required>
+      <input type="text" name="text" placeholder="Hello">
+      <input type="button" value="Send SMS">
+    </form>
+  </section>
+  <p class="response"></p>
+
+  <!-- Socket.io: This is optional. will be explained later! -->
+  <!--<script src="/socket.io/socket.io.js"></script> -->
+  <!-- Your JS file -->
+  <script src="js/app.js"></script>
+</body>
+</html>
