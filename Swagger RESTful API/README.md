@@ -3,7 +3,7 @@
 
 To start this project use following commands:
 
-Install (Swagger)[https://github.com/swagger-api/swagger-node] globaly
+Install [Swagger](https://github.com/swagger-api/swagger-node) globaly
 
 ```
 npm i -g swagger
