@@ -7,14 +7,17 @@ var magnetURI = '';
 var readContent = (callback) => {
     fs.readFile('./magnet.txt', function(err, content){
         if(err){
-            return callback(err);
+            return callback(null, err);
         }
         callback(content.toString());
     });
 }
 
-readContent(() => {
-    client.add(magnetURI, {path: './'}, function(torrent) {
+readContent((URI,err) => {
+
+    if(err) { return err; }
+    
+    client.add(URI, {path: './'}, function(torrent) {
             client.on('torrent', function (torrent) {
 
                 var ispis = setInterval(function(){
