@@ -2,8 +2,6 @@ var WebTorrent = require('webtorrent');
 var fs = require('fs');
 var client = new WebTorrent();
 
-var magnetURI = '';
-
 var readContent = (callback) => {
     fs.readFile('./magnet.txt', function(err, content){
         if(err){
